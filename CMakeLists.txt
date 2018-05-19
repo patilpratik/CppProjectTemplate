@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.1.0)
 
 # project name
-project (sample_pmaths_project)
+project (sample-pmaths-project)
 
 set(PROJ_MAJOR_VERSION 0)
 set(PROJ_MINOR_VERSION 1)
@@ -30,6 +30,7 @@ file(GLOB SOURCES src/*.cpp)
 add_library (${TARGET} SHARED ${SOURCES})
 
 install(TARGETS ${TARGET} DESTINATION lib)
+install(TARGETS ${TARGET} DESTINATION ../Package/Deliverable/artifacts)
 #install(FILES pmaths.h DESTINATION include)
 
 # setting out put paths
