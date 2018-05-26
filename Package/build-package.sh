@@ -7,9 +7,9 @@ source ./Package.config
 TRUE=1
 FALSE=0
 
-RELEASE=FALSE
+RELEASE=${FALSE}
 BUILD_VERSION=""
-ADD_GIT_TAG=FALSE
+ADD_GIT_TAG=${FALSE}
 
 
 usage()
