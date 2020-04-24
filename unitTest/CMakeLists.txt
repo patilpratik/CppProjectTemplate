@@ -37,7 +37,7 @@ find_package(Threads REQUIRED)
 add_library(gtest STATIC IMPORTED) # or STATIC instead of SHARED
 set_target_properties(gtest PROPERTIES
 # Update this location to point to libgtest.a
-  IMPORTED_LOCATION "../../../../googleTest/googletest/googlemock/gtest/libgtest.a"
+  IMPORTED_LOCATION "../../../../googleTest/googletest/lib/libgtest.a"
 )
 
 # adding library to test
@@ -47,6 +47,8 @@ set_target_properties(${TEST_TARGET} PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "../../include"
 )
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -m64 -std=c++0x  -g3 -Wall -O0 ") 
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -fPIC ")
 
 # link the libraries to the executable
 target_link_libraries( ut_${TEST_TARGET} Threads::Threads)

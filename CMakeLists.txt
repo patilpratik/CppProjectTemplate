@@ -30,6 +30,7 @@ file(GLOB SOURCES src/*.cpp)
 add_library (${TARGET} SHARED ${SOURCES})
 
 install(TARGETS ${TARGET} DESTINATION lib)
+install(TARGETS ${TARGET} DESTINATION ../lib)
 install(TARGETS ${TARGET} DESTINATION ../Package/Deliverable/artifacts)
 #install(FILES pmaths.h DESTINATION include)
 
